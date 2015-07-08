@@ -79,9 +79,11 @@ public class JSONParser {
             Log.e("Buffer Error", "Error converting result " + e.toString());
         }
 
+        JSONObject jObj = null;
+
         // try parse the string to a JSON object
         try {
-            JSONObject jObj = new JSONObject(json);
+            jObj = new JSONObject(json);
         } catch (JSONException e) {
             Log.e("JSON Parser", "Error parsing data " + e.toString());
         }
